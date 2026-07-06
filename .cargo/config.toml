@@ -5,7 +5,7 @@ rustflags = [
     # Let the wasm heap grow on demand.
     # "-C", "link-arg=-sALLOW_MEMORY_GROWTH=1",
     # Heap grow on demand doesnt seem to work, using fixed size wasmMemory
-    "-C", "link-arg=-sINITIAL_MEMORY=67108864",
+    "-C", "link-arg=-sINITIAL_MEMORY=64MB",
     # raylib's audio backend (miniaudio) busy-waits via `emscripten_sleep(1)`
     # during WebAudio init. The first sound play aborts without ASYNCIFY.
     # The classic `while !rl.window_should_close()` loop also needs it.
